@@ -1,0 +1,14 @@
+.openai
+.sites-runtime
+.qa
+.git
+node_modules
+.next
+out
+artifacts
+docs
+PROJECT_ROADMAP.md
+*.log
+*.tsbuildinfo
+.env*
+.npm-cache
