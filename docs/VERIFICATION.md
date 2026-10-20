@@ -65,3 +65,11 @@ Production deployment succeeded on 19 October 2026.
 - A production screenshot is saved as `public/images/screenshots/live-desktop.jpg`.
 
 The first deployment attempt exposed an incorrect Vercel output-directory setting. It was corrected to `.next` for the Next.js framework builder, and the verified production deployment uses that correction.
+
+## GitHub integration — 20 October 2026
+
+- Repository: https://github.com/kreatorrdev/sentinelstack (private).
+- Branch: `main`.
+- The complete source, documentation, dependency lockfile, and portfolio screenshots are included.
+- Local credentials, provider state, build output, dependencies, and QA authorization screenshots are excluded.
+- Vercel confirms that the repository is connected to the existing SentinelStack project. Updates on `main` use its production deployment workflow.

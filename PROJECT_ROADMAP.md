@@ -95,7 +95,7 @@ Check off tasks in order. **Status: 20/20 — implementation, portfolio document
 - [x] **S16 — Responsive/a11y:** mobile, contrast, focus, screen readers and reduced motion. *(Tailwind, testing)*
 - [x] **S17 — Security review:** dependency audit, no embedded secrets, minimal PII, honest mock claims. *(npm audit review / code inspection)*
 - [x] **S18 — SEO/performance:** metadata, Open Graph, optimized assets, semantic headings. *(Next.js / Lighthouse)*
-- [x] **S19 — Build/deploy:** lint and production build passed; deployed to https://sentinelstack.vercel.app and production smoke-tested. GitHub publication is not performed. *(npm, Git, Vercel)*
+- [x] **S19 — Build/deploy:** lint and production build passed; deployed to https://sentinelstack.vercel.app and production smoke-tested. Source is stored in the private `kreatorrdev/sentinelstack` GitHub repository and connected to Vercel for deployments from `main`. *(npm, Git, Vercel)*
 - [x] **S20 — Portfolio package:** README, screenshots, simulated-data disclosure and case study. *(Markdown / images)*
 
 ## 6. Suggested folder layout
@@ -132,7 +132,7 @@ sentinelstack/
 - [ ] Accessible FAQ, navigable charts (with textual summaries) and strong visual contrast.
 - [ ] Dependency/security review completed; no credentials stored in Git.
 - [ ] `npm run build` and configured lint checks pass.
-- [ ] Live Vercel URL, GitHub README and case study are ready.
+- [x] Live Vercel URL, private GitHub README and case study are ready.
 
 ## 8. Optional phase 2 (separate security application)
 

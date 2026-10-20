@@ -57,6 +57,8 @@ Deploy from the project root with an authorized Vercel CLI:
 vercel --prod
 ```
 
+The private GitHub repository `kreatorrdev/sentinelstack` is connected to the existing Vercel project. Changes pushed to `main` start a production deployment automatically. The public website stays at https://sentinelstack.vercel.app; repository access remains private.
+
 No hosting credentials are included in the source. Authentication files and local QA material are excluded from uploads. A previously reserved, unpublished Sites identity is retained in `.openai/hosting.json` and excluded from Vercel deployments.
 
 ## Project structure
