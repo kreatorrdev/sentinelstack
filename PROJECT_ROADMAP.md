@@ -64,7 +64,7 @@ If the demo request provider is not configured, clicking submit must disclose th
 
 ## 5. Implementation roadmap
 
-Check off tasks in order. **Status: 20/20 — implementation, portfolio documentation, local verification, and Vercel production delivery complete.**.
+**Status: 20/20 — implementation, portfolio documentation, local verification, and Vercel production delivery complete.** Verification limits and the development dependency advisory are recorded in `docs/VERIFICATION.md`.
 
 ### Phase A — Foundation
 
@@ -87,14 +87,14 @@ Check off tasks in order. **Status: 20/20 — implementation, portfolio document
 ### Phase C — Lead capture
 
 - [x] **S13 — Contact form:** name, email, company and optional message, with a privacy note. *(React Hook Form)*
-- [x] **S14 — Validation/states:** Zod schema, accessible errors, loading, real delivery success/failure. *(Zod)*
+- [x] **S14 — Validation/states:** Zod schema, accessible errors, and an explicit non-sending preview confirmation. *(Zod)*
 - [x] **S15 — Delivery/abuse handling:** configure service and anti-spam; otherwise a non-sending demo form. *(Formspree or equivalent)*
 
 ### Phase D — Security, polish and release
 
-- [x] **S16 — Responsive/a11y:** mobile, contrast, focus, screen readers and reduced motion. *(Tailwind, testing)*
+- [x] **S16 — Responsive/a11y:** mobile layout, text contrast, keyboard focus, semantic labels, reduced-motion support, and a pause-effects control. Manual checks are documented; full screen-reader certification is not claimed. *(Tailwind, browser testing)*
 - [x] **S17 — Security review:** dependency audit, no embedded secrets, minimal PII, honest mock claims. *(npm audit review / code inspection)*
-- [x] **S18 — SEO/performance:** metadata, Open Graph, optimized assets, semantic headings. *(Next.js / Lighthouse)*
+- [x] **S18 — SEO/performance:** metadata, Open Graph, optimized assets, semantic headings. *(Next.js / static output review)*
 - [x] **S19 — Build/deploy:** lint and production build passed; deployed to https://sentinelstack.vercel.app and production smoke-tested. Source is stored in the private `kreatorrdev/sentinelstack` GitHub repository and connected to Vercel for deployments from `main`. *(npm, Git, Vercel)*
 - [x] **S20 — Portfolio package:** README, screenshots, simulated-data disclosure and case study. *(Markdown / images)*
 
@@ -125,13 +125,13 @@ sentinelstack/
 
 ## 7. Definition of done
 
-- [ ] All marketing sections and links work on desktop, tablet and mobile.
-- [ ] Mock charts and alerts are explicitly identified as **simulated**.
-- [ ] No false certifications, real customer claims or genuine monitoring claims appear.
-- [ ] Demo request form handles invalid inputs and reports whether anything was actually sent.
-- [ ] Accessible FAQ, navigable charts (with textual summaries) and strong visual contrast.
-- [ ] Dependency/security review completed; no credentials stored in Git.
-- [ ] `npm run build` and configured lint checks pass.
+- [x] All marketing sections and links work on desktop, tablet and mobile.
+- [x] Mock charts and alerts are explicitly identified as **simulated**.
+- [x] No false certifications, real customer claims or genuine monitoring claims appear.
+- [x] Demo request form handles invalid inputs and reports whether anything was actually sent.
+- [x] Keyboard-operated FAQ, charts with textual summaries, and reviewed text contrast.
+- [x] Dependency/security review completed; no credentials stored in Git.
+- [x] `npm run build` and configured lint checks pass.
 - [x] Live Vercel URL, private GitHub README and case study are ready.
 
 ## 8. Optional phase 2 (separate security application)
@@ -143,9 +143,9 @@ Only if we deliberately turn this marketing site into a larger backend project:
 - Read-only integrations with user-authorized security tools, clear permission boundaries and scoped API keys.
 - Explicit threat model, rate limiting and abuse monitoring before accepting real data.
 
-## 9. First next action
+## 9. Handoff
 
-**Start with S01/S02:** decide the fictional audience (small businesses vs. security teams), write the hero copy and choose the dashboard mockup visual direction. Save this file as `PROJECT_ROADMAP.md` in the project root.
+The portfolio MVP is complete. Use the public Vercel URL, screenshots, README, and case study when presenting it. Changes to `main` deploy automatically through the private GitHub repository. Real lead delivery or a security backend would be separate future work.
 
 ## Delivery notes — 19 October 2026
 
@@ -153,3 +153,7 @@ The implementation includes the complete interactive marketing experience and no
 
 Production URL: https://sentinelstack.vercel.app
 Production deployment: dpl_9TG4efg48D1XHyiBQzXHs1xR6NyS (READY).
+
+## Final polish — 21 October 2026
+
+Improved secondary text contrast, added a keyboard-operated control to pause decorative effects, and preserved the export button's accessible name when its text is hidden on narrow screens. Production build, TypeScript, ESLint, and runtime dependency review passed. The development-only advisory remains documented. The delivery checklist now reflects the implemented scope.

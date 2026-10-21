@@ -45,7 +45,7 @@ export function Dashboard() {
         <div className="dashboard-main">
           <div className="dashboard-toolbar"><span>Workspace <ChevronRight size={12}/> <strong>{data.label}</strong></span><div><span className="toolbar-demo">Demo mode</span><Bell size={15}/><span className="toolbar-avatar">JD</span></div></div>
           <div className="dashboard-content">
-            <div className="dashboard-title"><div><p className="mono">YOUR SECURITY, AT A GLANCE</p><h3>{scenario==="overview"?"Security overview":data.label}<span>.</span></h3><p>A connected view of what matters most.</p></div><button type="button" className="dashboard-export" onClick={exportReport}><Download size={13}/><span>Export report</span></button></div>
+            <div className="dashboard-title"><div><p className="mono">YOUR SECURITY, AT A GLANCE</p><h3>{scenario==="overview"?"Security overview":data.label}<span>.</span></h3><p>A connected view of what matters most.</p></div><button type="button" className="dashboard-export" aria-label="Export simulated report" onClick={exportReport}><Download size={13}/><span>Export report</span></button></div>
             <div className="dashboard-metrics" aria-live="polite">
               <Metric label="Security posture" value={data.score} suffix="/100" icon={ShieldCheck} accent="mint" note="Example health score"/>
               <Metric label="Assets in view" value={data.assets} icon={Box} accent="blue" note="Across sample sources"/>

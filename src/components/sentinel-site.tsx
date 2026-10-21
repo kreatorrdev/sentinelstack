@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, MotionConfig, motion, useReducedMotion, useScroll } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowDown, ArrowRight, ArrowUpRight, AudioLines, BellRing, Braces, Check, CheckCheck, CircleCheck, Cloud, Code2, Command, FileChartColumnIncreasing, Fingerprint, Focus, Layers3, LockKeyhole, Menu, Network, Plus, Radar as RadarIcon, Shield, ShieldCheck, Sparkles, Workflow, X, Zap } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, AudioLines, BellRing, Braces, Check, CheckCheck, CircleCheck, Cloud, Code2, Command, FileChartColumnIncreasing, Fingerprint, Focus, Layers3, LockKeyhole, Menu, Network, Pause, Play, Plus, Radar as RadarIcon, Shield, ShieldCheck, Sparkles, Workflow, X, Zap } from "lucide-react";
 import { Dashboard } from "./dashboard";
 import { Radar } from "./radar";
 import { faqs, plans } from "@/data/security";
@@ -23,6 +23,7 @@ const navLinks = [{href:"#platform",label:"Platform"},{href:"#capabilities",labe
 
 export function SentinelSite() {
   const [menu,setMenu] = useState(false);
+  const [effectsPaused,setEffectsPaused] = useState(false);
   const [privacy,setPrivacy] = useState(false);
   const privacyRef = useRef<HTMLDialogElement>(null);
   const [annual,setAnnual] = useState(false);
@@ -45,9 +46,10 @@ export function SentinelSite() {
   },[menu]);
 
   return (
-    <MotionConfig reducedMotion="user">
-      <div className="site" id="top">
+    <MotionConfig reducedMotion={effectsPaused ? "always" : "user"}>
+      <div className="site" id="top" data-effects-paused={effectsPaused}>
         <a className="skip-link" href="#main">Skip to content</a>
+        <button type="button" className="effects-toggle" aria-label="Pause visual effects" aria-pressed={effectsPaused} onClick={()=>setEffectsPaused(!effectsPaused)}>{effectsPaused?<Play size={13} aria-hidden="true"/>:<Pause size={13} aria-hidden="true"/>}<span>{effectsPaused?"Effects paused":"Pause effects"}</span></button>
         <motion.div className="reading-progress" style={{scaleX:scrollYProgress}}/>
         <header className="site-header"><div className="header-inner container"><Logo/><nav className="desktop-nav" aria-label="Main navigation">{navLinks.map(link=><a key={link.href} href={link.href}>{link.label}</a>)}</nav><div className="header-actions"><a href="#demo" className="button button-nav">Request a demo <ArrowUpRight size={15}/></a><button type="button" className="menu-toggle" onClick={()=>setMenu(!menu)} aria-label={menu?"Close navigation":"Open navigation"} aria-expanded={menu} aria-controls="mobile-navigation">{menu?<X size={22}/>:<Menu size={22}/>}</button></div></div>
           <AnimatePresence>{menu&&<motion.nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" initial={{opacity:0,height:0}} animate={{opacity:1,height:"auto"}} exit={{opacity:0,height:0}}>{navLinks.map(link=><a key={link.href} href={link.href} onClick={()=>setMenu(false)}>{link.label}<ArrowUpRight size={16}/></a>)}<a href="#demo" onClick={()=>setMenu(false)}>Request a demo <ArrowRight size={16}/></a></motion.nav>}</AnimatePresence>

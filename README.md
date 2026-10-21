@@ -17,7 +17,7 @@ SentinelStack brings a premium marketing website and a simulated security worksp
 - Severity filters and expandable findings with context and an illustrative next step.
 - Downloadable text reports containing only the chosen synthetic dataset.
 - Monthly/annual illustrative prices with the annual total displayed explicitly.
-- Keyboard-operated tabs, mobile navigation, FAQ, skip link, visible focus, native privacy dialog, and reduced-motion support.
+- Keyboard-operated tabs, mobile navigation, FAQ, skip link, visible focus, native privacy dialog, reduced-motion support, and an optional pause-effects control.
 - React Hook Form + Zod validation. Successful submission explicitly states that nothing was sent, stored, or booked.
 
 ## Stack
