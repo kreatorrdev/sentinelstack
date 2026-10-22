@@ -71,3 +71,19 @@
 .sidebar-link{font-size:8px}.dashboard-toolbar>span{font-size:7px}.dashboard-title>div>p:last-child{font-size:8px}.dashboard-export{font-size:7px}.metric>div{font-size:9px}.metric>p{font-size:7px}.chart-heading h4{font-size:11px}.chart-heading p{font-size:8px}.period-switch>button{font-size:8px}.chart-legend>span{font-size:7px}.chart-summary{font-size:8px}.alerts-heading h4{font-size:11px}.filter-select select{font-size:7px}.alert-name strong{font-size:9px}.alert-name small{font-size:7px}.severity-badge{font-size:7px}.dashboard-footnote{font-size:6px}.dashboard-bottom>span:last-child{font-size:7px}.posture-status{font-size:8px}.posture-status>span{font-size:7px}
 }
 @media(max-width:370px){.sidebar-link{font-size:7px}.metric>div{font-size:8px}.metric>p{font-size:7px}.alert-name strong{font-size:8px}.alert-name small{font-size:6px}.severity-badge{font-size:6px}.alert-table-head,.alert-row{grid-template-columns:minmax(0,1fr) 53px 8px}.dashboard-title h3{font-size:19px}.dashboard-title>div>p:last-child{font-size:8px}}
+
+
+/* Supplied orbital photograph: the only hero background image. */
+.hero {
+  background-image: linear-gradient(90deg, rgba(8,14,21,.88) 0%, rgba(8,14,21,.7) 32%, rgba(8,14,21,.18) 70%, rgba(8,14,21,.12) 100%), url("/images/europe-at-dawn.webp");
+  background-size: cover;
+  background-position: center 62%;
+  background-repeat: no-repeat;
+}
+.hero .hero-grid, .hero .hero-ambient, .hero .hero-earth, .hero .hero-shade { display: none; }
+@media (max-width: 780px) {
+  .hero {
+    background-image: linear-gradient(rgba(8,14,21,.75), rgba(8,14,21,.35)), url("/images/europe-at-dawn.webp");
+    background-position: 60% center;
+  }
+}
