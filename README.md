@@ -1,10 +1,13 @@
 # SentinelStack
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 **Less noise. More control.** A fictional cybersecurity SaaS designed and developed as a portfolio project.
 
 **Live site:** https://sentinelstack.vercel.app
 
-**Private source repository:** https://github.com/kreatorrdev/sentinelstack
+**Public source repository:** https://github.com/kreatorrdev/sentinelstack
 
 SentinelStack brings a premium marketing website and a simulated security workspace into one interactive experience. All product capabilities, data, organizations, names, events, and prices are illustrative. No security monitoring, network scanning, authentication, checkout, or live telemetry is implemented.
 
@@ -57,7 +60,7 @@ Deploy from the project root with an authorized Vercel CLI:
 vercel --prod
 ```
 
-The private GitHub repository `kreatorrdev/sentinelstack` is connected to the existing Vercel project. Changes pushed to `main` start a production deployment automatically. The public website stays at https://sentinelstack.vercel.app; repository access remains private.
+The public GitHub repository `kreatorrdev/sentinelstack` is connected to the existing Vercel project. Changes pushed to `main` start a production deployment automatically. The public website stays at https://sentinelstack.vercel.app; the source repository is public.
 
 No hosting credentials are included in the source. Authentication files and local QA material are excluded from uploads. A previously reserved, unpublished Sites identity is retained in `.openai/hosting.json` and excluded from Vercel deployments.
 
@@ -80,3 +83,9 @@ The form has no remote delivery provider and performs no network request. Its in
 ## Portfolio materials
 
 See [the case study](docs/CASE_STUDY.md) for the project story and [verification notes](docs/VERIFICATION.md) for the tested behavior and limitations.
+
+## Maintaining this project
+
+See the [contribution guide](CONTRIBUTING.md) for setup, relevant checks, documentation and configuration rules.
+
+Browse the [documentation index](docs/README.md) for current guides and historical records.
